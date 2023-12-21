@@ -1,0 +1,735 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>VScode常用命令 | AIRA</title><meta name="author" content="AIRA"><meta name="copyright" content="AIRA"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="通用 General   按 Press 功能 Function    Ctrl + Shift + P,F1 显示命令面板 Show Command Palette   Ctrl + P 快速打开 Quick Open   Ctrl + Shift + N 新窗口&#x2F;实例 New window&#x2F;instance   Ctrl + Shift + W 关闭窗口&#x2F;实例 C">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VScode常用命令">
+<meta property="og:url" content="http://example.com/2023/12/21/VScode%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/index.html">
+<meta property="og:site_name" content="AIRA">
+<meta property="og:description" content="通用 General   按 Press 功能 Function    Ctrl + Shift + P,F1 显示命令面板 Show Command Palette   Ctrl + P 快速打开 Quick Open   Ctrl + Shift + N 新窗口&#x2F;实例 New window&#x2F;instance   Ctrl + Shift + W 关闭窗口&#x2F;实例 C">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://anime.bang-dream.com/mygo/wordpress/wp-content/uploads/2023/05/31104819/anime_MyGO_icon_B_Soyo.jpg">
+<meta property="article:published_time" content="2023-12-21T05:44:40.000Z">
+<meta property="article:modified_time" content="2023-12-21T06:39:29.027Z">
+<meta property="article:author" content="AIRA">
+<meta property="article:tag" content="指令">
+<meta property="article:tag" content="VScode">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://anime.bang-dream.com/mygo/wordpress/wp-content/uploads/2023/05/31104819/anime_MyGO_icon_B_Soyo.jpg"><link rel="shortcut icon" href="https://anime.bang-dream.com/mygo/wordpress/wp-content/themes/mygo_v1/assets/images/common/favicon.ico"><link rel="canonical" href="http://example.com/2023/12/21/VScode%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'VScode常用命令',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-12-21 14:39:29'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.1.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://anime.bang-dream.com/mygo/wordpress/wp-content/uploads/2023/05/31104819/anime_MyGO_icon_B_Soyo.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">5</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></div><div class="menus_item"><a class="site-page" href="/bangumis/"><i class="fa-fw fas fa-video"></i><span> 追番</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://z1.ax1x.com/2023/12/09/pi22VED.png')"><nav id="nav"><span id="blog-info"><a href="/" title="AIRA"></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></div><div class="menus_item"><a class="site-page" href="/bangumis/"><i class="fa-fw fas fa-video"></i><span> 追番</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">VScode常用命令</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-12-21T05:44:40.000Z" title="发表于 2023-12-21 13:44:40">2023-12-21</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-12-21T06:39:29.027Z" title="更新于 2023-12-21 14:39:29">2023-12-21</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%B7%A5%E5%85%B7/">工具</a></span></div><div class="meta-secondline"></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="通用-General"><a href="#通用-General" class="headerlink" title="通用 General"></a>通用 General</h2><table>
+<thead>
+<tr>
+<th>按 Press</th>
+<th>功能 Function</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ctrl + Shift + P,F1</td>
+<td>显示命令面板 Show Command Palette</td>
+</tr>
+<tr>
+<td>Ctrl + P</td>
+<td>快速打开 Quick Open</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + N</td>
+<td>新窗口&#x2F;实例 New window&#x2F;instance</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + W</td>
+<td>关闭窗口&#x2F;实例 Close window&#x2F;instance</td>
+</tr>
+</tbody></table>
+<h2 id="基础编辑-Basic-editing"><a href="#基础编辑-Basic-editing" class="headerlink" title="基础编辑 Basic editing"></a>基础编辑 Basic editing</h2><table>
+<thead>
+<tr>
+<th>按 Press</th>
+<th>功能 Function</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ctrl + X</td>
+<td>剪切行（空选定） Cut line (empty selection)</td>
+</tr>
+<tr>
+<td>Ctrl + C</td>
+<td>复制行（空选定）Copy line (empty selection)</td>
+</tr>
+<tr>
+<td>Alt+ ↑ &#x2F; ↓</td>
+<td>向上&#x2F;向下移动行 Move line up&#x2F;down</td>
+</tr>
+<tr>
+<td>Shift + Alt + ↓ &#x2F; ↑</td>
+<td>向上&#x2F;向下复制行 Copy line up&#x2F;down</td>
+</tr>
+<tr>
+<td>Ctrl + Shift+K</td>
+<td>删除行 Delete line</td>
+</tr>
+<tr>
+<td>Ctrl + Enter</td>
+<td>在下面插入行 Insert line below</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + Enter</td>
+<td>在上面插入行 Insert line above</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + \</td>
+<td>跳到匹配的括号 Jump to matching bracket</td>
+</tr>
+<tr>
+<td>Ctrl + ] &#x2F; [</td>
+<td>增加&#x2F;减少缩进行 Indent&#x2F;outdent line</td>
+</tr>
+<tr>
+<td>Home</td>
+<td>转到行首 Go to beginning of line</td>
+</tr>
+<tr>
+<td>End</td>
+<td>转到行尾 Go to end of line</td>
+</tr>
+<tr>
+<td>Ctrl + Home</td>
+<td>转到文件开头 Go to beginning of file</td>
+</tr>
+<tr>
+<td>Ctrl + End</td>
+<td>转到文件末尾 Go to end of file</td>
+</tr>
+<tr>
+<td>Ctrl + ↑ &#x2F; ↓</td>
+<td>向上&#x2F;向下滚动行 Scroll line up&#x2F;down</td>
+</tr>
+<tr>
+<td>Alt + PgUp &#x2F; PgDown</td>
+<td>向上&#x2F;向下滚动页面 Scroll page up&#x2F;down</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + [</td>
+<td>折叠（折叠）区域 Fold (collapse) region</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + ]</td>
+<td>展开（未折叠）区域 Unfold (uncollapse) region</td>
+</tr>
+<tr>
+<td>Ctrl + K Ctrl + [</td>
+<td>折叠（未折叠）所有子区域 Fold (collapse) all subregions</td>
+</tr>
+<tr>
+<td>Ctrl + K Ctrl + ]</td>
+<td>展开（未折叠）所有子区域 Unfold (uncollapse) all subregions</td>
+</tr>
+<tr>
+<td>Ctrl + K Ctrl + 0</td>
+<td>折叠（折叠）所有区域 Fold (collapse) all regions</td>
+</tr>
+<tr>
+<td>Ctrl + K Ctrl + J</td>
+<td>展开（未折叠）所有区域 Unfold (uncollapse) all regions</td>
+</tr>
+<tr>
+<td>Ctrl + K Ctrl + C</td>
+<td>添加行注释 Add line comment</td>
+</tr>
+<tr>
+<td>Ctrl + K Ctrl + U</td>
+<td>删除行注释 Remove line comment</td>
+</tr>
+<tr>
+<td>Ctrl + &#x2F;</td>
+<td>切换行注释 Toggle line comment</td>
+</tr>
+<tr>
+<td>Shift + Alt + A</td>
+<td>切换块注释 Toggle block comment</td>
+</tr>
+<tr>
+<td>Alt + Z</td>
+<td>切换换行 Toggle word wrap</td>
+</tr>
+</tbody></table>
+<h2 id="导航-Navigation"><a href="#导航-Navigation" class="headerlink" title="导航 Navigation"></a>导航 Navigation</h2><table>
+<thead>
+<tr>
+<th>按 Press</th>
+<th>功能 Function</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ctrl + T</td>
+<td>显示所有符号 Show all Symbols</td>
+</tr>
+<tr>
+<td>Ctrl + G</td>
+<td>转到行… Go to Line…</td>
+</tr>
+<tr>
+<td>Ctrl + P</td>
+<td>转到文件… Go to File…</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + O</td>
+<td>转到符号… Go to Symbol…</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + M</td>
+<td>显示问题面板 Show Problems panel</td>
+</tr>
+<tr>
+<td>F8</td>
+<td>转到下一个错误或警告 Go to next error or warning</td>
+</tr>
+<tr>
+<td>Shift + F8</td>
+<td>转到上一个错误或警告 Go to previous error or warning</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + Tab</td>
+<td>导航编辑器组历史记录 Navigate editor group history</td>
+</tr>
+<tr>
+<td>Alt + ←&#x2F;→</td>
+<td>返回&#x2F;前进（返回上一步&#x2F;返回下一步） Go back &#x2F; forward</td>
+</tr>
+<tr>
+<td>Ctrl + M</td>
+<td>切换选项卡移动焦点 Toggle Tab moves focus</td>
+</tr>
+</tbody></table>
+<h2 id="搜索和替换-Search-and-replace"><a href="#搜索和替换-Search-and-replace" class="headerlink" title="搜索和替换 Search and replace"></a>搜索和替换 Search and replace</h2><table>
+<thead>
+<tr>
+<th>按 Press</th>
+<th>功能 Function</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ctrl + F</td>
+<td>查找 Find</td>
+</tr>
+<tr>
+<td>Ctrl + H</td>
+<td>替换 Replace</td>
+</tr>
+<tr>
+<td>F3 &#x2F; Shift + F3</td>
+<td>查找下一个&#x2F;上一个 Find next&#x2F;previous</td>
+</tr>
+<tr>
+<td>Alt + Enter</td>
+<td>选择查找匹配的所有出现 Select all occurences of Find match</td>
+</tr>
+<tr>
+<td>Ctrl + D</td>
+<td>将选择添加到下一个查找匹配 Add selection to next Find match</td>
+</tr>
+<tr>
+<td>Ctrl + K Ctrl + D</td>
+<td>将最后一个选择移至下一个查找匹配项 Move last selection to next Find match</td>
+</tr>
+<tr>
+<td>Alt + C &#x2F; R &#x2F; W</td>
+<td>切换区分大小写&#x2F;正则表达式&#x2F;整个词 Toggle case-sensitive &#x2F; regex &#x2F; whole word</td>
+</tr>
+</tbody></table>
+<h2 id="多光标和选择-Multi-cursor-and-selection"><a href="#多光标和选择-Multi-cursor-and-selection" class="headerlink" title="多光标和选择 Multi-cursor and selection"></a>多光标和选择 Multi-cursor and selection</h2><table>
+<thead>
+<tr>
+<th>按 Press</th>
+<th>功能 Function</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Alt +单击</td>
+<td>插入光标 Insert cursor</td>
+</tr>
+<tr>
+<td>Ctrl + Alt +↑&#x2F;↓</td>
+<td>在上&#x2F;下插入光标 Insert cursor above &#x2F; below</td>
+</tr>
+<tr>
+<td>Ctrl + U</td>
+<td>撤消上一个光标操作 Undo last cursor operation</td>
+</tr>
+<tr>
+<td>Shift + Alt + I</td>
+<td>在选定的每一行的末尾插入光标 Insert cursor at end of each line selected</td>
+</tr>
+<tr>
+<td>Ctrl + I</td>
+<td>选择当前行 Select current line</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + L</td>
+<td>选择当前选择的所有出现 Select all occurrences of current selection</td>
+</tr>
+<tr>
+<td>Ctrl + F2</td>
+<td>选择当前字的所有出现 Select all occurrences of current word</td>
+</tr>
+<tr>
+<td>Shift + Alt + →</td>
+<td>展开选择 Expand selection</td>
+</tr>
+<tr>
+<td>Shift + Alt + ←</td>
+<td>缩小选择 Shrink selection</td>
+</tr>
+<tr>
+<td>Shift + Alt + （拖动鼠标）</td>
+<td>列（框）选择 Column (box) selection</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + Alt +（箭头键）</td>
+<td>列（框）选择 Column (box) selection</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + Alt + PgUp &#x2F; PgDown</td>
+<td>列（框）选择页上&#x2F;下 Column (box) selection page up&#x2F;down</td>
+</tr>
+</tbody></table>
+<h2 id="富语言编辑-Rich-languages-editing"><a href="#富语言编辑-Rich-languages-editing" class="headerlink" title="富语言编辑 Rich languages editing"></a>富语言编辑 Rich languages editing</h2><table>
+<thead>
+<tr>
+<th>按 Press</th>
+<th>功能 Function</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ctrl + 空格</td>
+<td>触发建议 Trigger suggestion</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + Space</td>
+<td>触发器参数提示 Trigger parameter hints</td>
+</tr>
+<tr>
+<td>Tab	Emmet</td>
+<td>展开缩写 Emmet expand abbreviation</td>
+</tr>
+<tr>
+<td>Shift + Alt + F</td>
+<td>格式化文档 Format document</td>
+</tr>
+<tr>
+<td>Ctrl + K Ctrl + F</td>
+<td>格式选定区域 Format selection</td>
+</tr>
+<tr>
+<td>F12</td>
+<td>转到定义 Go to Definition</td>
+</tr>
+<tr>
+<td>Alt + F12</td>
+<td>Peek定义 Peek Definition</td>
+</tr>
+<tr>
+<td>Ctrl + K F12</td>
+<td>打开定义到边 Open Definition to the side</td>
+</tr>
+<tr>
+<td>Ctrl + .</td>
+<td>快速解决 Quick Fix</td>
+</tr>
+<tr>
+<td>Shift + F12</td>
+<td>显示引用 Show References</td>
+</tr>
+<tr>
+<td>F2</td>
+<td>重命名符号 Rename Symbol</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + . &#x2F;，</td>
+<td>替换为下一个&#x2F;上一个值 Replace with next&#x2F;previous value</td>
+</tr>
+<tr>
+<td>Ctrl + K Ctrl + X</td>
+<td>修剪尾随空格 Trim trailing whitespace</td>
+</tr>
+<tr>
+<td>Ctrl + K M</td>
+<td>更改文件语言 Change file language</td>
+</tr>
+</tbody></table>
+<h2 id="编辑器管理-Editor-management"><a href="#编辑器管理-Editor-management" class="headerlink" title="编辑器管理 Editor management"></a>编辑器管理 Editor management</h2><table>
+<thead>
+<tr>
+<th>按 Press</th>
+<th>功能 Function</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ctrl + F4, Ctrl + W</td>
+<td>关闭编辑器 Close editor</td>
+</tr>
+<tr>
+<td>Ctrl + K F</td>
+<td>关闭文件夹 Close folder</td>
+</tr>
+<tr>
+<td>Ctrl + \</td>
+<td>拆分编辑器 Split editor</td>
+</tr>
+<tr>
+<td>Ctrl + 1 &#x2F; 2 &#x2F; 3</td>
+<td>聚焦到第1，第2或第3编辑器组 Focus into 1st, 2nd or 3rd editor group</td>
+</tr>
+<tr>
+<td>Ctrl + K Ctrl + ←&#x2F;→</td>
+<td>聚焦到上一个&#x2F;下一个编辑器组 Focus into previous&#x2F;next editor group</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + PgUp &#x2F; PgDown</td>
+<td>向左&#x2F;向右移动编辑器 Move editor left&#x2F;right</td>
+</tr>
+<tr>
+<td>Ctrl + K ← &#x2F; →</td>
+<td>移动活动编辑器组 Move active editor group</td>
+</tr>
+</tbody></table>
+<h2 id="文件管理-File-management"><a href="#文件管理-File-management" class="headerlink" title="文件管理 File management"></a>文件管理 File management</h2><table>
+<thead>
+<tr>
+<th>按 Press</th>
+<th>功能 Function</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ctrl + N</td>
+<td>新文件 New File</td>
+</tr>
+<tr>
+<td>Ctrl + O</td>
+<td>打开文件… Open File…</td>
+</tr>
+<tr>
+<td>Ctrl + S</td>
+<td>保存 Save</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + S</td>
+<td>另存为… Save As…</td>
+</tr>
+<tr>
+<td>Ctrl + K S</td>
+<td>全部保存 Save All</td>
+</tr>
+<tr>
+<td>Ctrl + F4</td>
+<td>关闭 Close</td>
+</tr>
+<tr>
+<td>Ctrl + K Ctrl + W</td>
+<td>关闭所有 Close All</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + T</td>
+<td>重新打开关闭的编辑器 Reopen closed editor</td>
+</tr>
+<tr>
+<td>Ctrl + K</td>
+<td>输入保持打开 Enter Keep Open</td>
+</tr>
+<tr>
+<td>Ctrl + Tab</td>
+<td>打开下一个 Open next</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + Tab</td>
+<td>打开上一个 Open previous</td>
+</tr>
+<tr>
+<td>Ctrl + K P</td>
+<td>复制活动文件的路径 Copy path of active file</td>
+</tr>
+<tr>
+<td>Ctrl + K R</td>
+<td>显示资源管理器中的活动文件 Reveal active file in Explorer</td>
+</tr>
+<tr>
+<td>Ctrl + K O</td>
+<td>显示新窗口&#x2F;实例中的活动文件 Show active file in new window&#x2F;instance</td>
+</tr>
+</tbody></table>
+<h2 id="显示-Display"><a href="#显示-Display" class="headerlink" title="显示 Display"></a>显示 Display</h2><table>
+<thead>
+<tr>
+<th>按 Press</th>
+<th>功能 Function</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>F11</td>
+<td>切换全屏 Toggle full screen</td>
+</tr>
+<tr>
+<td>Shift + Alt + 1</td>
+<td>切换编辑器布局 Toggle editor layout</td>
+</tr>
+<tr>
+<td>Ctrl + &#x3D; &#x2F; -</td>
+<td>放大&#x2F;缩小 Zoom in&#x2F;out</td>
+</tr>
+<tr>
+<td>Ctrl + B</td>
+<td>切换侧栏可见性 Toggle Sidebar visibility</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + E</td>
+<td>显示浏览器&#x2F;切换焦点 Show Explorer &#x2F; Toggle focus</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + F</td>
+<td>显示搜索 Show Search</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + G</td>
+<td>显示Git Show Git</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + D</td>
+<td>显示调试 Show Debug</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + X</td>
+<td>显示扩展 Show Extensions</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + H</td>
+<td>替换文件 Replace in files</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + J</td>
+<td>切换搜索详细信息 Toggle Search details</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + C</td>
+<td>打开新命令提示符&#x2F;终端 Open new command prompt&#x2F;terminal</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + U</td>
+<td>显示输出面板 Show Output panel</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + V</td>
+<td>切换Markdown预览 Toggle Markdown preview</td>
+</tr>
+<tr>
+<td>Ctrl + K V</td>
+<td>从旁边打开Markdown预览 Open Markdown preview to the side</td>
+</tr>
+</tbody></table>
+<h2 id="调试-Debug"><a href="#调试-Debug" class="headerlink" title="调试 Debug"></a>调试 Debug</h2><table>
+<thead>
+<tr>
+<th>按 Press</th>
+<th>功能 Function</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>F9</td>
+<td>切换断点 Toggle breakpoint</td>
+</tr>
+<tr>
+<td>F5</td>
+<td>开始&#x2F;继续 Start&#x2F;Continue</td>
+</tr>
+<tr>
+<td>Shift+F5</td>
+<td>停止 Stop</td>
+</tr>
+<tr>
+<td>F11 &#x2F; Shift+F11</td>
+<td>下一步&#x2F;上一步 Step into&#x2F;out</td>
+</tr>
+<tr>
+<td>F10</td>
+<td>跳过 Step over</td>
+</tr>
+<tr>
+<td>Ctrl+K Ctrl+I</td>
+<td>显示悬停 Show hover</td>
+</tr>
+</tbody></table>
+<h2 id="集成终端-Integrated-terminal"><a href="#集成终端-Integrated-terminal" class="headerlink" title="集成终端 Integrated terminal"></a>集成终端 Integrated terminal</h2><table>
+<thead>
+<tr>
+<th>按 Press</th>
+<th>功能 Function</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ctrl+&#96;</td>
+<td>显示集成终端 Show integrated terminal</td>
+</tr>
+<tr>
+<td>Ctrl+Shift+&#96;</td>
+<td>创建新终端 Create new terminal</td>
+</tr>
+<tr>
+<td>Ctrl+Shift+C</td>
+<td>复制选定 Copy selection</td>
+</tr>
+<tr>
+<td>Ctrl+Shift+V</td>
+<td>粘贴到活动端子 Paste into active terminal</td>
+</tr>
+<tr>
+<td>Ctrl+↑ &#x2F; ↓</td>
+<td>向上&#x2F;向下滚动 Scroll up&#x2F;down</td>
+</tr>
+<tr>
+<td>Shift+PgUp &#x2F;</td>
+<td>PgDown	向上&#x2F;向下滚动页面 Scroll page up&#x2F;down</td>
+</tr>
+<tr>
+<td>Ctrl+&#96;Home &#x2F;</td>
+<td>End	滚动到顶部&#x2F;底部 Scroll to top&#x2F;bottom</td>
+</tr>
+</tbody></table>
+<p>————————————————</p>
+<p>版权声明：本文为CSDN博主「dreaming317」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/dreaming317/article/details/103823950">https://blog.csdn.net/dreaming317/article/details/103823950</a></p>
+</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%8C%87%E4%BB%A4/">指令</a><a class="post-meta__tags" href="/tags/VScode/">VScode</a></div><div class="post_share"><div class="social-share" data-image="https://anime.bang-dream.com/mygo/wordpress/wp-content/uploads/2023/05/31104819/anime_MyGO_icon_B_Soyo.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2023/12/18/JAVA%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" title="JAVA面向对象"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">JAVA面向对象</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://anime.bang-dream.com/mygo/wordpress/wp-content/uploads/2023/05/31104819/anime_MyGO_icon_B_Soyo.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">AIRA</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">5</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/usotsukisa" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%9A%E7%94%A8-General"><span class="toc-number">1.</span> <span class="toc-text">通用 General</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E7%BC%96%E8%BE%91-Basic-editing"><span class="toc-number">2.</span> <span class="toc-text">基础编辑 Basic editing</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%BC%E8%88%AA-Navigation"><span class="toc-number">3.</span> <span class="toc-text">导航 Navigation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%90%9C%E7%B4%A2%E5%92%8C%E6%9B%BF%E6%8D%A2-Search-and-replace"><span class="toc-number">4.</span> <span class="toc-text">搜索和替换 Search and replace</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E5%85%89%E6%A0%87%E5%92%8C%E9%80%89%E6%8B%A9-Multi-cursor-and-selection"><span class="toc-number">5.</span> <span class="toc-text">多光标和选择 Multi-cursor and selection</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%8C%E8%AF%AD%E8%A8%80%E7%BC%96%E8%BE%91-Rich-languages-editing"><span class="toc-number">6.</span> <span class="toc-text">富语言编辑 Rich languages editing</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E8%BE%91%E5%99%A8%E7%AE%A1%E7%90%86-Editor-management"><span class="toc-number">7.</span> <span class="toc-text">编辑器管理 Editor management</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86-File-management"><span class="toc-number">8.</span> <span class="toc-text">文件管理 File management</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%98%BE%E7%A4%BA-Display"><span class="toc-number">9.</span> <span class="toc-text">显示 Display</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B0%83%E8%AF%95-Debug"><span class="toc-number">10.</span> <span class="toc-text">调试 Debug</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9B%86%E6%88%90%E7%BB%88%E7%AB%AF-Integrated-terminal"><span class="toc-number">11.</span> <span class="toc-text">集成终端 Integrated terminal</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/12/21/VScode%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" title="VScode常用命令">VScode常用命令</a><time datetime="2023-12-21T05:44:40.000Z" title="发表于 2023-12-21 13:44:40">2023-12-21</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/12/18/JAVA%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" title="JAVA面向对象">JAVA面向对象</a><time datetime="2023-12-18T10:35:45.000Z" title="发表于 2023-12-18 18:35:45">2023-12-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/12/09/Linux%E4%B8%AD%E9%87%8D%E8%A6%81%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/" title="Linux中重要的配置文件">Linux中重要的配置文件</a><time datetime="2023-12-09T07:29:43.000Z" title="发表于 2023-12-09 15:29:43">2023-12-09</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/12/09/Linux%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/" title="Linux目录结构">Linux目录结构</a><time datetime="2023-12-09T07:04:06.000Z" title="发表于 2023-12-09 15:04:06">2023-12-09</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/12/08/APT%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/" title="APT常用指令">APT常用指令</a><time datetime="2023-12-08T11:56:00.000Z" title="发表于 2023-12-08 19:56:00">2023-12-08</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://z1.ax1x.com/2023/12/09/pi22VED.png')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By AIRA</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div></div></body></html>
